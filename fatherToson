@@ -1,0 +1,35 @@
+#!/bin/bash
+
+# this shell script generates an HTML page
+
+#title="Testament"
+#header="The Last Will and Testament of Thomas Wayne"
+#systeminfo="System information for "
+rightnow=$(date +"%x %r %Z")
+cat <<- _EOF_
+
+<html>
+	<head>
+		<title>
+			Testament
+		</title>
+	</head>
+
+		<body>
+	
+	<h2> The Last Will and Testament of Thomas Wayne </h2>
+	
+	<h3>In the event of my death I hearby declare that all my wealthy possassions pass to my son Bruce Wayne. Bruce I ask you to honor the Wayne family legacy. Please be strong, You are young but destined for great things. Make the most of your opportunities. Use that to give back to a city 
+that has given us so much. To change the lives of millions of people. Do not be overwhelmed with this wealth. Do not waste it at all on fast cars and
+outragious clothes and persuit of a destructive life style. Invest in gotham treat its people like family. Watch over them and use this money to save gotham from forces beyond their control. My depeset regret that I will not see you grow into the good man I know you will become. I finally my son I ask you to never abandon the city to fate. We have lived through dark days and their are many more to come but it is the good people who stand for Gotham when others turn and run. In return I will love you forever. Your father Thomas.</h3>
+
+<h2> System Information </h2>
+
+<h4> Hostname: $HOSTNAME </h4>
+
+<p> Updated on $rightnow by $USER </p>		
+		</body>
+
+</html>
+
+_EOF_
